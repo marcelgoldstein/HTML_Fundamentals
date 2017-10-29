@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lesson 10 - Creating Forms</title>
+</head>
+<body>
+
+    <h1>Creating Forms</h1>
+
+    <form action="/Lessons/SubmitLesson10" method="post">
+        <p>
+            <label>Customer name:</label>
+            <input type="text" id="customerName" name="customerName" maxlength="10"/>
+        </p>
+
+        <fieldset>
+            <legend>Pizza Size</legend>
+            <p>
+                <label><input type="radio" name="size" value="small" />Small (10 inch)</label><br />
+                <label><input type="radio" name="size" value="medium" checked/>Medium (12 inch)</label><br />
+                <label><input type="radio" name="size" value="large" />Large (14 inch)</label><br />
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pizza Toppings</legend>
+            <p>
+                <label><input type="checkbox" name="toppings" value="bacon" />Bacon</label><br />
+                <label><input type="checkbox" name="toppings" value="cheese" />Extra Cheese</label><br />
+                <label><input type="checkbox" name="toppings" value="onion" />Onion</label><br />
+                <label><input type="checkbox" name="toppings" value="mushroom" />Mushroom</label><br />
+            </p>
+        </fieldset>
+
+        <p>
+            Crust
+            <select name="crust" >
+                <option value="c1">Normal</option>
+                <option value="c2" selected>Chicago Deep Dish (+$2)</option>
+                <option value="c3">New York Thin</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="comments">Delivery Instructions:</label><br />
+            <textarea name="comments" cols="50" rows="5" maxlength="1000"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Continue to Step 2" />
+        </p>
+        <p>
+            <input type="reset" />
+        </p>
+    </form>
+
+</body>
+</html>
